@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+</head>
+
+<body>
+    <h1>{{ object.name }} Details</h1>
+        <div class="container1">
+            <div class="image-holder">
+                <img src="{{ object.flag }}" alt="Flag of {{ object.name }}">
+            </div>
+            <div class="text-holder">
+                <h2>Name: <span>{{ object.name }}<span></h2>
+                <h4>Cioc: <span>{{ object.cioc }}</span></h4>
+                <h4>Calling Codes:<span> {{ object.callingCodes }}</span></h4>
+                <h4>Capital: <span>{{ object.capital }}</span></h4>
+                <h4>Region: <span>{{ object.region }}</span></h4>
+                <h4>Population: <span>{{ object.population }}</span></h4>
+                <h4>Timezone: <span>{{ object.timezone }}</span></h4>
+            </div>
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Countries</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Sans";
+        }
+        body{
+            background-color: #d3d3d3;
+            margin-left: 2%;
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4,20%);
+            grid-auto-rows: minmax(200px,auto);
+            align-items: stretch;
+            grid-row-gap: 20px;
+            grid-column-gap: 6%;
+        }
+        .image{
+            width: 100%;
+            height: 100%;
+        }
+        
+    </style>
+</head>
+<body>
+    {% for i in values %}
+    <div class="image-holder"><img class="image" src="{{i.flag}}" alt=""></div>
+    {% endfor %}
+</body>
+</html>
